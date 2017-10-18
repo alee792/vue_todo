@@ -1,6 +1,6 @@
 <template>
   <div>
-    <todo-list></todo-list>
+    <todo-list v-bind:todos="todos"></todo-list>
   </div>
 </template>
 
@@ -8,6 +8,7 @@
 import TodoList from './components/TodoList';
 
 export default {
+  props: ['todos'],
   name: 'app',
   components: {
     TodoList,
